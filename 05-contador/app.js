@@ -87,10 +87,3 @@ const handleClick = function(){
         criarTr(listaNumeros[i], listaPar[i], listaImpar[i],listaMultiplos[i],listaPotencia2[i])
     }
 }
-
-console.log(criarListaContagem(10))
-console.log(criarListapares(10))
-console.log(criarListaImpares(10))
-console.log(criarListaMultiplo(10))
-console.log(criarListaPotencia(10))
-criarTr(2,4,5,1,2)
