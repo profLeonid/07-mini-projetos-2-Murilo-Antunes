@@ -1,5 +1,5 @@
 'use strict'
-
+let tabela = document.getElementById('tabela')
 const criarListaContagem = function(){
     let listaContagem = []
 
@@ -65,7 +65,7 @@ const criarListaDivisao = function(numero){
 console.log(criarListaDivisao(7))
 
 const criarLinha = function(numero, adicao, subtracao, multiplicacao, divisao){
-    let tabela = document.getElementById('tabela')
+
     let tr = document.createElement('tr')
     let tdNumero = document.createElement('td')
     tdNumero.textContent = numero
@@ -73,6 +73,9 @@ const criarLinha = function(numero, adicao, subtracao, multiplicacao, divisao){
     tdAdicao.textContent = adicao
     let tdSubtracao = document.createElement('td')
     tdSubtracao.textContent = subtracao
+    if(subtracao < 0){
+        tdSubtracao.className = "negativo"
+    }
     let tdMultiplicacao = document.createElement('td')
     tdMultiplicacao.textContent = multiplicacao
     let tdDivisao = document.createElement('td')
@@ -83,6 +86,7 @@ const criarLinha = function(numero, adicao, subtracao, multiplicacao, divisao){
 }
 
 const handleClick = function(){
+    tabela.textContent = ""
     const numero = Number(document.getElementById('numero').value)
 
     const listaContagem = criarListaContagem()
@@ -91,6 +95,8 @@ const handleClick = function(){
     const listaMultiplicacao = criarListaMultiplicacao(numero)
     const listaDivisao = criarListaDivisao(numero)
 
+
     for(let i = 0; i <= 10; i++)
         criarLinha(listaContagem[i], listaAdicao[i], listaSubtracao[i], listaMultiplicacao[i], listaDivisao[i])
+    
 }
