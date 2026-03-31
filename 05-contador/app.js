@@ -28,7 +28,7 @@ const criarListaImpares = function(quantidade){
     let listaImpar = []
 
     for(let i = 1; i <= quantidade; i++){
-        let resultado = (i * 2) + 1
+        let resultado = (i * 2) - 1
         listaImpar.push(resultado)
     }
 
