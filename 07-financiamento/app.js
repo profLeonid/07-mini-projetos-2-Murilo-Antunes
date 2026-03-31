@@ -98,7 +98,7 @@ const handleClick = function(){
     const LISTA_TOTAL = criarListaTotalMes(numeroParcelas,LISTA_PARCELA, LISTA_JUROS)
     console.log(LISTA_TOTAL)
 
-    for(let i = 1; i < numeroParcelas; i++)
+    for(let i = 0; i < numeroParcelas; i++)
         criarLinha(LISTA_CONTAGEM[i], LISTA_PARCELA[i], LISTA_JUROS[i], LISTA_TOTAL[i], LISTA_SALDO_DEVEDOR[i])
 }
 
